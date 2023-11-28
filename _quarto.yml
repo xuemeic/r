@@ -4,8 +4,8 @@ project:
   
 
 book:
-  title: "Rb2"
-  author: "XC"
+  title: "STT 475"
+  author: "Xuemei Chen"
   date: "11/27/2023"
   chapters:
     - index.qmd
