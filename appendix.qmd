@@ -1,0 +1,7 @@
+---
+toc: true
+---
+
+# Statistics
+
+A variable is categorical if its possible values belong to a few categories. For example, type of residence 

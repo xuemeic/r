@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "STT 475",
     "section": "",
-    "text": "Preface"
+    "text": "Overview\nThis is draft lecture notes for DSC/STT 303: R for Data Science."
   },
   {
     "objectID": "intro.html",
     "href": "intro.html",
-    "title": "",
+    "title": "1  R Basics",
     "section": "",
-    "text": "Read a file"
+    "text": "R can be used as a calculator.\n\n2 + 2\n\n[1] 4\n\n\n\n2 Read/save files"
   },
   {
     "objectID": "summary.html",
@@ -19,5 +19,40 @@
     "title": "",
     "section": "",
     "text": "In summary, this book has no content whatsoever."
+  },
+  {
+    "objectID": "index.html#r",
+    "href": "index.html#r",
+    "title": "STT 475",
+    "section": "R",
+    "text": "R\nTo download R, go to CRAN, https://cloud.r-project.org. Get the latest version."
+  },
+  {
+    "objectID": "index.html#rstudio",
+    "href": "index.html#rstudio",
+    "title": "STT 475",
+    "section": "RStudio",
+    "text": "RStudio\nRStudio is an integrated development environment, or IDE, for R programming, Download it from https://posit.co/download/rstudio-desktop/."
+  },
+  {
+    "objectID": "intro.html#basic-calculator",
+    "href": "intro.html#basic-calculator",
+    "title": "1  R Basics",
+    "section": "1.1 Basic Calculator",
+    "text": "1.1 Basic Calculator\nR can be used as a calculator. Enter the following in the console.\n\n2 + 2\n\n[1] 4\n\n\nWhen we assign a value to a variable.\n\nn &lt;- 20"
+  },
+  {
+    "objectID": "intro.html#vector",
+    "href": "intro.html#vector",
+    "title": "1  R Basics",
+    "section": "1.2 Vector",
+    "text": "1.2 Vector\nThe following defines a vector in R.\n\nx &lt;- c(1,2,-3,5)\nx\n\n[1]  1  2 -3  5"
+  },
+  {
+    "objectID": "intro.html#readsave-files",
+    "href": "intro.html#readsave-files",
+    "title": "1  R Basics",
+    "section": "1.3 Read/save files",
+    "text": "1.3 Read/save files"
   }
 ]

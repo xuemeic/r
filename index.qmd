@@ -1,4 +1,10 @@
-# Preface {.unnumbered}
+# Overview {.unnumbered}
 
+This is draft lecture notes for DSC/STT 303: R for Data Science.
 
+## R
 
+To download R, go to CRAN, <https://cloud.r-project.org>. Get the latest version.
+
+## RStudio
+RStudio is an integrated development environment, or IDE, for R programming, Download it from <https://posit.co/download/rstudio-desktop/>. 

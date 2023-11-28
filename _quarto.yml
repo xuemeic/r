@@ -5,13 +5,16 @@ project:
 
 book:
   title: "STT 475"
-  author: "Xuemei Chen"
-  date: "11/27/2023"
+  #author: "Xuemei Chen"
+  #date: "11/27/2023"
+  navbar:
+    search: true
   chapters:
     - index.qmd
     - intro.qmd
     - summary.qmd
     - references.qmd
+    - appendix.qmd
 
 bibliography: references.bib
 
