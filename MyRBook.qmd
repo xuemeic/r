@@ -4,9 +4,12 @@ format: html
 editor: visual
 toc: true
 number-sections: true
+project:
+  type: website
+  output-dir: docs
 ---
 
-# Intro
+# Intro-2
 
 ## Running Code
 
