@@ -1,0 +1,13 @@
+---
+toc: true
+---
+
+# Statistics
+
+in @sec-intro-df
+
+bar chart
+
+histogram
+
+mean

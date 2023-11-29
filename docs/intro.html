@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
+<link href="./stats.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -154,14 +154,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./appendix.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Elementary Statistics</span></span></a>
+  <a href="./stats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Statistics</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -185,11 +179,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#basic-r-workspace-functions" id="toc-basic-r-workspace-functions" class="nav-link" data-scroll-target="#basic-r-workspace-functions"><span class="header-section-number">1.3</span> Basic R workspace functions</a></li>
   <li><a href="#structures-in-r" id="toc-structures-in-r" class="nav-link" data-scroll-target="#structures-in-r"><span class="header-section-number">1.4</span> Structures in R</a>
   <ul class="collapse">
-  <li><a href="#vector-a-one-dimensional-array-of-numeric-value" id="toc-vector-a-one-dimensional-array-of-numeric-value" class="nav-link" data-scroll-target="#vector-a-one-dimensional-array-of-numeric-value"><span class="header-section-number">1.4.1</span> Vector: a one dimensional array of numeric value</a></li>
+  <li><a href="#vector-a-one-dimensional-array" id="toc-vector-a-one-dimensional-array" class="nav-link" data-scroll-target="#vector-a-one-dimensional-array"><span class="header-section-number">1.4.1</span> Vector: a one dimensional array</a></li>
+  <li><a href="#sec-intro-df" id="toc-sec-intro-df" class="nav-link" data-scroll-target="#sec-intro-df"><span class="header-section-number">1.4.2</span> Data Frame</a></li>
+  <li><a href="#factors" id="toc-factors" class="nav-link" data-scroll-target="#factors"><span class="header-section-number">1.4.3</span> Factors</a></li>
+  <li><a href="#lists" id="toc-lists" class="nav-link" data-scroll-target="#lists"><span class="header-section-number">1.4.4</span> Lists</a></li>
   </ul></li>
   <li><a href="#coding-style" id="toc-coding-style" class="nav-link" data-scroll-target="#coding-style"><span class="header-section-number">1.5</span> Coding Style</a></li>
-  <li><a href="#readsave-files" id="toc-readsave-files" class="nav-link" data-scroll-target="#readsave-files"><span class="header-section-number">1.6</span> Read/save files</a></li>
-  <li><a href="#basic-charts" id="toc-basic-charts" class="nav-link" data-scroll-target="#basic-charts"><span class="header-section-number">1.7</span> Basic charts</a></li>
+  <li><a href="#functions-in-r" id="toc-functions-in-r" class="nav-link" data-scroll-target="#functions-in-r"><span class="header-section-number">1.6</span> Functions in R</a></li>
+  <li><a href="#loops-in-r" id="toc-loops-in-r" class="nav-link" data-scroll-target="#loops-in-r"><span class="header-section-number">1.7</span> loops in R</a></li>
+  <li><a href="#readsave-files" id="toc-readsave-files" class="nav-link" data-scroll-target="#readsave-files"><span class="header-section-number">1.8</span> Read/save files</a></li>
+  <li><a href="#basic-charts" id="toc-basic-charts" class="nav-link" data-scroll-target="#basic-charts"><span class="header-section-number">1.9</span> Basic charts</a></li>
   </ul>
 </nav>
     </div>
@@ -268,19 +267,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">clears console (same as ctrl + l)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">help(mean)</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">help(mean) or ?mean</td>
+<td style="text-align: left;">Getting Help on function mean()</td>
 </tr>
 </tbody>
 </table>
 <p>The # symbol begins a comment. These will be used regularly to notate the action immediately below the comment. If a commented line is run in the R console, nothing will happen.</p>
-<p>You can use another keyboard shortcut to help you fix it. For example, you can press ↑ to bring the last command you typed and edit it. Or, type “this” then press Cmd/Ctrl + ↑ to list all the commands you’ve typed that start with those letters. Use the arrow keys to navigate, then press enter to retype the command.</p>
+<p><strong>Keyboard shortcut</strong>:</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">shortcut</th>
+<th style="text-align: left;">function</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">[Tab]</td>
+<td style="text-align: left;">auto-fill</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">[Cmd/ctrl + enter]</td>
+<td style="text-align: left;">execute code</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">[↑]</td>
+<td style="text-align: left;">bring command history</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cmd/Ctrl + ↑</td>
+<td style="text-align: left;">bring command history with the same starting letters typed in console</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="structures-in-r" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="structures-in-r"><span class="header-section-number">1.4</span> Structures in R</h2>
 <p>There are several types of structures (or variable types) in R.</p>
-<section id="vector-a-one-dimensional-array-of-numeric-value" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" class="anchored" data-anchor-id="vector-a-one-dimensional-array-of-numeric-value"><span class="header-section-number">1.4.1</span> Vector: a one dimensional array of numeric value</h3>
+<section id="vector-a-one-dimensional-array" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="vector-a-one-dimensional-array"><span class="header-section-number">1.4.1</span> Vector: a one dimensional array</h3>
 <p>The following defines a vector in R.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="sc">-</span><span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">2</span>)</span>
@@ -289,42 +318,135 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[1]  3 -1 -3  5  2</code></pre>
 </div>
 </div>
-<p>In R, the indexing starts at 1. Get the 4th coordinate of x:</p>
+<p>You can have a vector of strings.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"a"</span>,<span class="st">"b"</span>,<span class="st">"c"</span>,<span class="st">"d"</span>,<span class="st">"e"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In R, the indexing starts at 1. Retrieve the 4th coordinate of s:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>s[<span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 5</code></pre>
+<pre><code>[1] "d"</code></pre>
 </div>
 </div>
-<p>Get the first 3 coordinates of x</p>
+<p>Retrieve the first 3 coordinates of s</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>s[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1]  3 -1 -3</code></pre>
+<pre><code>[1] "a" "b" "c"</code></pre>
 </div>
 </div>
-<p>Get the 1st, 2nd, and 5th coordinates</p>
+<p>Retrieve the 1st, 2nd, and 5th coordinates of s</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">5</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>s[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">5</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1]  3 -1  2</code></pre>
+<pre><code>[1] "a" "b" "e"</code></pre>
 </div>
 </div>
-<p>Get all coordinates but the 3rd</p>
+<p>Retrieve all coordinates but the 3rd</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>x[<span class="sc">-</span><span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>s[<span class="sc">-</span><span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1]  3 -1  5  2</code></pre>
+<pre><code>[1] "a" "b" "d" "e"</code></pre>
 </div>
 </div>
+<p>The function seq() is very handy in creating equally spaced numbers.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
 </div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.0 0.2 0.4 0.6 0.8 1.0</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">5</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 2 3 4 5</code></pre>
+</div>
+</div>
 <p>And basic arithmetic on vectors is applied to every element of of the vector</p>
-<p>x*y</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>x<span class="sc">*</span>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  3 -2 -9 20 10</code></pre>
+</div>
+</div>
+</section>
+<section id="sec-intro-df" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="sec-intro-df"><span class="header-section-number">1.4.2</span> Data Frame</h3>
+<p>The function data() lists all data sets stored in R. “CO2” is a data frame that is stored in R.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>?CO2</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(CO2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Plant"     "Type"      "Treatment" "conc"      "uptake"   </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(CO2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 84</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(CO2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Plant   Type  Treatment conc uptake
+1   Qn1 Quebec nonchilled   95   16.0
+2   Qn1 Quebec nonchilled  175   30.4
+3   Qn1 Quebec nonchilled  250   34.8
+4   Qn1 Quebec nonchilled  350   37.2
+5   Qn1 Quebec nonchilled  500   35.3
+6   Qn1 Quebec nonchilled  675   39.2</code></pre>
+</div>
+</div>
+<p>We will be working with data frames a lot throughout. For now we will show how to obtain a particular column.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>CO2<span class="sc">$</span>Plant</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] Qn1 Qn1 Qn1 Qn1 Qn1 Qn1 Qn1 Qn2 Qn2 Qn2 Qn2 Qn2 Qn2 Qn2 Qn3 Qn3 Qn3 Qn3 Qn3
+[20] Qn3 Qn3 Qc1 Qc1 Qc1 Qc1 Qc1 Qc1 Qc1 Qc2 Qc2 Qc2 Qc2 Qc2 Qc2 Qc2 Qc3 Qc3 Qc3
+[39] Qc3 Qc3 Qc3 Qc3 Mn1 Mn1 Mn1 Mn1 Mn1 Mn1 Mn1 Mn2 Mn2 Mn2 Mn2 Mn2 Mn2 Mn2 Mn3
+[58] Mn3 Mn3 Mn3 Mn3 Mn3 Mn3 Mc1 Mc1 Mc1 Mc1 Mc1 Mc1 Mc1 Mc2 Mc2 Mc2 Mc2 Mc2 Mc2
+[77] Mc2 Mc3 Mc3 Mc3 Mc3 Mc3 Mc3 Mc3
+12 Levels: Qn1 &lt; Qn2 &lt; Qn3 &lt; Qc1 &lt; Qc3 &lt; Qc2 &lt; Mn3 &lt; Mn2 &lt; Mn1 &lt; ... &lt; Mc1</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>CO2[,<span class="st">"Plant"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] Qn1 Qn1 Qn1 Qn1 Qn1 Qn1 Qn1 Qn2 Qn2 Qn2 Qn2 Qn2 Qn2 Qn2 Qn3 Qn3 Qn3 Qn3 Qn3
+[20] Qn3 Qn3 Qc1 Qc1 Qc1 Qc1 Qc1 Qc1 Qc1 Qc2 Qc2 Qc2 Qc2 Qc2 Qc2 Qc2 Qc3 Qc3 Qc3
+[39] Qc3 Qc3 Qc3 Qc3 Mn1 Mn1 Mn1 Mn1 Mn1 Mn1 Mn1 Mn2 Mn2 Mn2 Mn2 Mn2 Mn2 Mn2 Mn3
+[58] Mn3 Mn3 Mn3 Mn3 Mn3 Mn3 Mc1 Mc1 Mc1 Mc1 Mc1 Mc1 Mc1 Mc2 Mc2 Mc2 Mc2 Mc2 Mc2
+[77] Mc2 Mc3 Mc3 Mc3 Mc3 Mc3 Mc3 Mc3
+12 Levels: Qn1 &lt; Qn2 &lt; Qn3 &lt; Qc1 &lt; Qc3 &lt; Qc2 &lt; Mn3 &lt; Mn2 &lt; Mn1 &lt; ... &lt; Mc1</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>CO2[[<span class="st">"Plant"</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] Qn1 Qn1 Qn1 Qn1 Qn1 Qn1 Qn1 Qn2 Qn2 Qn2 Qn2 Qn2 Qn2 Qn2 Qn3 Qn3 Qn3 Qn3 Qn3
+[20] Qn3 Qn3 Qc1 Qc1 Qc1 Qc1 Qc1 Qc1 Qc1 Qc2 Qc2 Qc2 Qc2 Qc2 Qc2 Qc2 Qc3 Qc3 Qc3
+[39] Qc3 Qc3 Qc3 Qc3 Mn1 Mn1 Mn1 Mn1 Mn1 Mn1 Mn1 Mn2 Mn2 Mn2 Mn2 Mn2 Mn2 Mn2 Mn3
+[58] Mn3 Mn3 Mn3 Mn3 Mn3 Mn3 Mc1 Mc1 Mc1 Mc1 Mc1 Mc1 Mc1 Mc2 Mc2 Mc2 Mc2 Mc2 Mc2
+[77] Mc2 Mc3 Mc3 Mc3 Mc3 Mc3 Mc3 Mc3
+12 Levels: Qn1 &lt; Qn2 &lt; Qn3 &lt; Qc1 &lt; Qc3 &lt; Qc2 &lt; Mn3 &lt; Mn2 &lt; Mn1 &lt; ... &lt; Mc1</code></pre>
+</div>
+</div>
+<p>With [ or [[, you can also access the column by position. For example, CO2[,1] and CO2[[1]] are two additional ways of extracting the first column.</p>
+</section>
+<section id="factors" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="factors"><span class="header-section-number">1.4.3</span> Factors</h3>
+<p>Factors are very useful for categorical variables.</p>
+</section>
+<section id="lists" class="level3" data-number="1.4.4">
+<h3 data-number="1.4.4" class="anchored" data-anchor-id="lists"><span class="header-section-number">1.4.4</span> Lists</h3>
+<p>difference between [ and [[, 27.3.3</p>
 </section>
 </section>
 <section id="coding-style" class="level2" data-number="1.5">
@@ -332,14 +454,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>my_variable</p>
 <p>Put spaces on either side of mathematical operators and the assignment operator</p>
 </section>
-<section id="readsave-files" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="readsave-files"><span class="header-section-number">1.6</span> Read/save files</h2>
+<section id="functions-in-r" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="functions-in-r"><span class="header-section-number">1.6</span> Functions in R</h2>
+<p>see later section</p>
 </section>
-<section id="basic-charts" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="basic-charts"><span class="header-section-number">1.7</span> Basic charts</h2>
+<section id="loops-in-r" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="loops-in-r"><span class="header-section-number">1.7</span> loops in R</h2>
+<p>see later sectoin</p>
+</section>
+<section id="readsave-files" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="readsave-files"><span class="header-section-number">1.8</span> Read/save files</h2>
+<p>read_csv creates a tibble. read.csv creates a regular data frame.</p>
+</section>
+<section id="basic-charts" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="basic-charts"><span class="header-section-number">1.9</span> Basic charts</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#ggplot(penguins, aes(x = species)) +</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">#geom_bar()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co">#ggplot(penguins, aes(x = species)) +</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">#geom_bar()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
@@ -586,8 +717,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./stats.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Statistics</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

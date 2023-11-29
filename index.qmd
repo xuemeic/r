@@ -1,6 +1,6 @@
 # Overview {.unnumbered}
 
-This is draft lecture notes on learning R and use R for data science.
+This is draft lecture notes on learning R as a programming language, a statistical software, and a great tool for data science.
 
 ## R
 
@@ -8,3 +8,4 @@ To download R, go to CRAN, <https://cloud.r-project.org>. Get the latest version
 
 ## RStudio
 RStudio is an integrated development environment, or IDE, for R programming, Download it from <https://posit.co/download/rstudio-desktop/>. 
+Make sure you install R first.
