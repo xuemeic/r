@@ -2,6 +2,12 @@
 toc: true
 ---
 
-# Statistics
+# Elementary Statistics
 
-A variable is categorical if its possible values belong to a few categories. For example, type of residence 
+A variable is categorical if its possible values belong to a few categories. For example, "type of residence" can be "apartments", "condo", or "single family house".
+
+bar chart
+
+histogram
+
+mean

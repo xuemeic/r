@@ -1,6 +1,6 @@
 # Overview {.unnumbered}
 
-This is draft lecture notes for DSC/STT 303: R for Data Science.
+This is draft lecture notes on learning R and use R for data science.
 
 ## R
 

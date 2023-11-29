@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STT 475 - 1&nbsp; R Basics</title>
+<title>R Learning - 1&nbsp; R Basics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -107,7 +107,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">STT 475</span>
+    <span class="navbar-title">R Learning</span>
     </a>
   </div>
         <div class="quarto-navbar-tools ms-auto">
@@ -160,14 +160,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+  <a href="./appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Elementary Statistics</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R Basics</span></span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
     </ul>
@@ -181,8 +181,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#basic-calculator" id="toc-basic-calculator" class="nav-link active" data-scroll-target="#basic-calculator"><span class="header-section-number">1.1</span> Basic Calculator</a></li>
-  <li><a href="#vector" id="toc-vector" class="nav-link" data-scroll-target="#vector"><span class="header-section-number">1.2</span> Vector</a></li>
-  <li><a href="#readsave-files" id="toc-readsave-files" class="nav-link" data-scroll-target="#readsave-files"><span class="header-section-number">1.3</span> Read/save files</a></li>
+  <li><a href="#assign-a-variable" id="toc-assign-a-variable" class="nav-link" data-scroll-target="#assign-a-variable"><span class="header-section-number">1.2</span> Assign a variable</a></li>
+  <li><a href="#basic-r-workspace-functions" id="toc-basic-r-workspace-functions" class="nav-link" data-scroll-target="#basic-r-workspace-functions"><span class="header-section-number">1.3</span> Basic R workspace functions</a></li>
+  <li><a href="#structures-in-r" id="toc-structures-in-r" class="nav-link" data-scroll-target="#structures-in-r"><span class="header-section-number">1.4</span> Structures in R</a>
+  <ul class="collapse">
+  <li><a href="#vector-a-one-dimensional-array-of-numeric-value" id="toc-vector-a-one-dimensional-array-of-numeric-value" class="nav-link" data-scroll-target="#vector-a-one-dimensional-array-of-numeric-value"><span class="header-section-number">1.4.1</span> Vector: a one dimensional array of numeric value</a></li>
+  </ul></li>
+  <li><a href="#coding-style" id="toc-coding-style" class="nav-link" data-scroll-target="#coding-style"><span class="header-section-number">1.5</span> Coding Style</a></li>
+  <li><a href="#readsave-files" id="toc-readsave-files" class="nav-link" data-scroll-target="#readsave-files"><span class="header-section-number">1.6</span> Read/save files</a></li>
+  <li><a href="#basic-charts" id="toc-basic-charts" class="nav-link" data-scroll-target="#basic-charts"><span class="header-section-number">1.7</span> Basic charts</a></li>
   </ul>
 </nav>
     </div>
@@ -210,29 +217,130 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="1.1" class="anchored" data-anchor-id="basic-calculator"><span class="header-section-number">1.1</span> Basic Calculator</h2>
 <p>R can be used as a calculator. Enter the following in the console.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">sin</span>(pi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
+<pre><code>[1] 2</code></pre>
 </div>
-</div>
-<p>When we assign a value to a variable.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">20</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="vector" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="vector"><span class="header-section-number">1.2</span> Vector</h2>
+<section id="assign-a-variable" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="assign-a-variable"><span class="header-section-number">1.2</span> Assign a variable</h2>
+<p>When we assign a value to a variable, it is better to use &lt;- as below.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">3</span><span class="sc">^</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now you can click on environment (top right panel) to see the variables.</p>
+<p>You will make lots of assignments, and &lt;- can be annoying to type. You can save time with RStudio’s keyboard shortcut: Alt &amp; - (the minus sign). Notice that RStudio automatically surrounds &lt;- with spaces, which is a good code formatting practice.</p>
+</section>
+<section id="basic-r-workspace-functions" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="basic-r-workspace-functions"><span class="header-section-number">1.3</span> Basic R workspace functions</h2>
+<table class="table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 59%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">command</th>
+<th style="text-align: left;">usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">rm(x)</td>
+<td style="text-align: left;">remove variable x</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">rm(list = ls())</td>
+<td style="text-align: left;">remove all variables in the current environment</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">getwd()</td>
+<td style="text-align: left;">list the current working directory</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">setwd(“/home/username/folder”)</td>
+<td style="text-align: left;">change current working directory</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">cat(“\014”)</td>
+<td style="text-align: left;">clears console (same as ctrl + l)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">help(mean)</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>The # symbol begins a comment. These will be used regularly to notate the action immediately below the comment. If a commented line is run in the R console, nothing will happen.</p>
+<p>You can use another keyboard shortcut to help you fix it. For example, you can press ↑ to bring the last command you typed and edit it. Or, type “this” then press Cmd/Ctrl + ↑ to list all the commands you’ve typed that start with those letters. Use the arrow keys to navigate, then press enter to retype the command.</p>
+</section>
+<section id="structures-in-r" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="structures-in-r"><span class="header-section-number">1.4</span> Structures in R</h2>
+<p>There are several types of structures (or variable types) in R.</p>
+<section id="vector-a-one-dimensional-array-of-numeric-value" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="vector-a-one-dimensional-array-of-numeric-value"><span class="header-section-number">1.4.1</span> Vector: a one dimensional array of numeric value</h3>
 <p>The following defines a vector in R.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="sc">-</span><span class="dv">3</span>,<span class="dv">5</span>)</span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="sc">-</span><span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">2</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1]  1  2 -3  5</code></pre>
+<pre><code>[1]  3 -1 -3  5  2</code></pre>
 </div>
 </div>
+<p>In R, the indexing starts at 1. Get the 4th coordinate of x:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
+</div>
+</div>
+<p>Get the first 3 coordinates of x</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  3 -1 -3</code></pre>
+</div>
+</div>
+<p>Get the 1st, 2nd, and 5th coordinates</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">5</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  3 -1  2</code></pre>
+</div>
+</div>
+<p>Get all coordinates but the 3rd</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>x[<span class="sc">-</span><span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  3 -1  5  2</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+</div>
+</div>
+<p>And basic arithmetic on vectors is applied to every element of of the vector</p>
+<p>x*y</p>
 </section>
-<section id="readsave-files" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="readsave-files"><span class="header-section-number">1.3</span> Read/save files</h2>
+</section>
+<section id="coding-style" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="coding-style"><span class="header-section-number">1.5</span> Coding Style</h2>
+<p>my_variable</p>
+<p>Put spaces on either side of mathematical operators and the assignment operator</p>
+</section>
+<section id="readsave-files" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="readsave-files"><span class="header-section-number">1.6</span> Read/save files</h2>
+</section>
+<section id="basic-charts" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="basic-charts"><span class="header-section-number">1.7</span> Basic charts</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#ggplot(penguins, aes(x = species)) +</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">#geom_bar()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>
